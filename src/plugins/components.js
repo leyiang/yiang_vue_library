@@ -1,7 +1,9 @@
 /* ======== IMPORT BASIC GLOBAL COMPONENTS ======== */
 
 /*------ Inputs ------*/
-import Input from "../components/Basic/Input/Input.vue";
+import Input from "../components/Basic/Input/Input";
+import Select from "../components/Basic/Input/Select";
+import YOption from "../components/Basic/Input/Option";
 /*------ Inputs ------*/
 
 /*------ Buttons ------*/
@@ -44,6 +46,8 @@ export default {
 
         /*------ Inputs ------*/
         Vue.component( add_tag_prefix("input"), Input );
+        Vue.component( add_tag_prefix("select"), Select );
+        Vue.component( add_tag_prefix("option"), YOption );
         /*------ Inputs ------*/
 
         /*------ Buttons ------*/

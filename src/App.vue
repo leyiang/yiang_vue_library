@@ -16,6 +16,7 @@
         <div class="flex flex-column">
             <h2 class="title">Inputs</h2>
             <!-- /.title -->
+            <y-select name="test" v-model="test"></y-select>
 
             <y-input type="text" :label="true" class="mb-h">Username</y-input>
             <y-input type="password" :label="true">Password</y-input>
@@ -137,6 +138,7 @@
     export default {
         data: () => ({
             value: false,
+            test: 1,
         }),
 
         mounted() {
@@ -162,6 +164,10 @@
 
             addFails() {
                 this.fails("Title", "content");
+            },
+
+            dragstart: function(e) {
+                console.log(e);
             }
         },
     }

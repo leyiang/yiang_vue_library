@@ -15,7 +15,6 @@
             <slot></slot>
         </span>
         <!-- /.label -->
-
     </div>
 
     <!-- /.input-group -->
@@ -35,7 +34,7 @@
             label: {
                 type: Boolean,
                 default: false,
-            }
+            },
         },
 
         data: () => ({
@@ -47,10 +46,7 @@
             inputExpandStatus() {
                 this.inputFocusStatus;
                 // return (this.$attrs.value) || this.inputFocusStatus;
-            }
-        },
-
-        created() {
+            },
         },
 
         methods: {
@@ -66,6 +62,11 @@
 </script>
 
 <style scoped>
+
+    .input-group {
+        position: relative;
+    }
+
     .label-input {
         position: relative;
         padding-top: 2rem;
@@ -95,4 +96,14 @@
         font-size: 1rem;
     }
     /*------ Focus Input ------*/
+
+    .fa {
+        position: absolute;
+        left: 1rem;
+        bottom: .8rem;
+    }
+
+    .has-icon input {
+        padding-left: 2.3rem;
+    }
 </style>
