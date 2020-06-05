@@ -11,6 +11,8 @@ import IconButton from "../components/Basic/Button/IconButton";
 
 /*------ Menus ------*/
 import Menu from "../components/Basic/Menu/Menu";
+import MenuItem from "../components/Basic/Menu/MenuItem";
+import ButtonMenu from "../components/Basic/Menu/ButtonMenu";
 /*------ Menus ------*/
 
 
@@ -36,6 +38,8 @@ export default {
 
         /*------ Menus ------*/
         Vue.component( add_tag_prefix("menu"), Menu );
+        Vue.component( add_tag_prefix("menu-item"), MenuItem );
+        Vue.component( add_tag_prefix("button-menu"), ButtonMenu );
         /*------ Menus ------*/
     }
 }

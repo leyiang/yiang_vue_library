@@ -6,6 +6,10 @@ import components from "./plugins/components";
 Vue.use( components );
 /*------ Import Global Components ------*/
 
+/*------ Register Global Directives ------*/
+import directives from "./plugins/directives";
+Vue.use( directives );
+/*------ Register Global Directives ------*/
 
 new Vue({
   render: function (h) { return h(App) },

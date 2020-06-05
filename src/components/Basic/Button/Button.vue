@@ -6,7 +6,6 @@
 
         <i v-if="iconClass" :class="iconClass" class="mr-h"></i>
         <slot>Submit</slot>
-
     </button>
 </template>
 
@@ -17,7 +16,7 @@
             icon: {
                 type: String,
                 default: "",
-            }
+            },
         },
 
         data: () => ({}),
@@ -45,7 +44,7 @@
         color: #323232;
         border: 1px solid #DDD;
 
-        padding: .75rem 1rem;
+        padding: .75rem 1.25rem;
     }
 
     /*------ Primary ------*/
@@ -80,5 +79,4 @@
         box-shadow: 0 0 0 .2rem rgba(255, 46, 46, 0.25);
     }
     /*------ Danger ------*/
-
 </style>

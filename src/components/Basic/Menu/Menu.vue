@@ -1,14 +1,14 @@
 <template>
     <div class="menu">
-        <button class="role-button menu-item clear-button-style focusable">Trash</button>
-        <button class="role-button menu-item clear-button-style focusable">Check</button>
+        <slot></slot>
     </div>
     <!-- /.menu -->
 </template>
 
 <script>
     export default {
-        data: () => ({}),
+        data: () => ({
+        }),
 
         created() {
 
@@ -20,22 +20,22 @@
 
 <style scoped>
     .menu {
-        background-color: pink;
+        background-color: #EEE;
         display: flex;
         flex-flow: column wrap;
+
+        width: 230px;
     }
 
     .menu.dark {
         color: #EEE;
-        background-color: #535353;
-    }
-    
-    .menu.light {
-        color: #535353;
-        background-color: #EEEEEE;
+        background-color: #4b5f6b;
     }
 
-    .menu-item {
-        padding: .75rem 1rem;
+    .menu.light {
+        color: #909399;
+        background-color: #FFFFFF;
+
+        box-shadow: 0 0 5px rgba(0, 0, 0, .1);
     }
 </style>
