@@ -2,9 +2,10 @@
     <button
         v-if="icon"
         class="role-button focusable icon-button"
-        :class="iconClass"
         v-on="$listeners"
-    ></button>
+    >
+        <i :class="iconClass"></i>
+    </button>
     <!-- /.button -->
 </template>
 
@@ -39,11 +40,15 @@
         background-color: transparent;
         border: none;
 
-        width: 48px;
-        height: 48px;
+        width: 42px;
+        height: 42px;
 
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .icon-button:hover {
@@ -54,13 +59,13 @@
         width: 36px;
         height: 36px;
 
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
 
     .icon-button.large {
-        width: 60px;
-        height: 60px;
+        width: 48px;
+        height: 48px;
 
         font-size: 2rem;
     }

@@ -25,6 +25,7 @@
         flex-flow: column wrap;
 
         width: 230px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
     }
 
     .menu.dark {
@@ -35,7 +36,5 @@
     .menu.light {
         color: #909399;
         background-color: #FFFFFF;
-
-        box-shadow: 0 0 5px rgba(0, 0, 0, .1);
     }
 </style>

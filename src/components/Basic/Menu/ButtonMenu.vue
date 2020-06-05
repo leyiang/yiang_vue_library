@@ -2,7 +2,7 @@
     <div class="button-menu" @mouseover="hoveringButtonMenu=true" @mouseout="hoveringButtonMenu=false">
 
         <!--  Use Blur Event to Collapse the Menu -->
-        <input v-focus-if:expanded @blur="inputBlur">
+        <input v-focus-if:expanded @blur="inputBlur" class="visually-hidden">
 
         <div class="button-menu-button mb-h" @click="toggle">
             <slot name="button"></slot>
@@ -53,12 +53,6 @@
 
 <style scoped>
 
-    input {
-        opacity: 0;
-        position: fixed;
-        left: 100%;
-    }
-
     input:focus {
         background-color: red;
     }
@@ -72,5 +66,6 @@
         transform: translateY(100%);
 
         position: absolute;
+        z-index: 15;
     }
 </style>

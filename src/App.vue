@@ -28,11 +28,13 @@
 
             <div class="flex align-center">
                 <y-button icon="plus" class="primary mr-h" @focus="click">The Button</y-button>
-                <y-button icon="trash" class="danger">The Button</y-button>
+                <y-button icon="trash" class="danger mr-h">The Button</y-button>
 
-                <y-icon-button icon="plus" class="small"></y-icon-button>
-                <y-icon-button icon="plus" @click="click"></y-icon-button>
-                <y-icon-button icon="plus" class="large"></y-icon-button>
+                <y-icon-button icon="cog" class="small mr-h"></y-icon-button>
+                <y-icon-button icon="cog" @click="click"></y-icon-button>
+                <y-icon-button icon="cog" class="large ml-h mr-h"></y-icon-button>
+
+                <y-switch-button name="123" v-model="value"></y-switch-button>
             </div>
             <!-- /.flex -->
 
@@ -86,13 +88,13 @@
                 </y-button-menu>
 
 
-                <y-button-menu>
+                <y-button-menu class="mr-2">
                     <template #button>
                         <y-icon-button icon="cogs">Tools</y-icon-button>
                     </template>
 
                     <template #menu>
-                        <y-menu class="light mr-1">
+                        <y-menu class="dark mr-1">
                             <y-menu-item icon="plus" @click="click" class="active">Add New</y-menu-item>
                             <y-menu-item icon="edit">Edit Task</y-menu-item>
                             <y-menu-item icon="trash">Delete Task</y-menu-item>
@@ -100,12 +102,33 @@
                     </template>
                 </y-button-menu>
 
+                <y-button class="primary mr-1" @click="addSuccess">Success Alert</y-button>
+                <y-button class="danger" @click="addFails">Fails Alert</y-button>
             </div>
             <!-- /.flex -->
 
         </div>
         <!-- /.flex -->
 
+
+        <div class="flex flex-column">
+            <h1 class="title">Loading</h1>
+            <!-- /.title -->
+
+            <div class="flex">
+                <y-circle-loading class="mr-2"></y-circle-loading>
+                <y-square-loading></y-square-loading>
+            </div>
+            <!-- /.flex -->
+
+        </div>
+        <!-- /.flex -->
+
+
+        <y-alert-list>
+        </y-alert-list>
+
+        <!-- /.alert-list -->
     </section>
     <!-- /.inner -->
 </template>
@@ -113,11 +136,11 @@
 <script>
     export default {
         data: () => ({
-            test: "123",
+            value: false,
         }),
 
-        created() {
-
+        mounted() {
+            this.issueStorageAlert();
         },
 
         methods: {
@@ -127,6 +150,18 @@
 
             click() {
                 console.log(1111);
+            },
+
+            the_form() {
+
+            },
+
+            addSuccess() {
+                this.success("Title", "Content");
+            },
+
+            addFails() {
+                this.fails("Title", "content");
             }
         },
     }

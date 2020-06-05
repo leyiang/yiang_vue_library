@@ -44,6 +44,7 @@
         color: #323232;
         border: 1px solid #DDD;
 
+        height: 42px;
         padding: .75rem 1.25rem;
     }
 
@@ -72,6 +73,7 @@
         background-color: var(--danger-darker-color);
     }
     .button.danger:active {
+        border: 1px solid var(--danger-color);
         background-color: var(--danger-darkest-color);
     }
     .button.danger:focus {
