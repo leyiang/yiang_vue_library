@@ -68,6 +68,7 @@
         margin-top: 1rem;
 
         animation: fadeIn .5s;
+        border-left: 5px solid transparent;
     }
 
     p {
@@ -86,11 +87,15 @@
     }
 
     .alert-item.success {
-        background-color: #49aa3b;
+        color: #49aa3b;
+        border-color: #49aa3b;
+        background-color: #caecc8;
     }
 
     .alert-item.fails {
-        background-color: #e2363f;
+        color: #e2363f;
+        border-color: #e2363f;
+        background-color: #ffe3df;
     }
 
     .alert-list .alert-item:last-of-type {
