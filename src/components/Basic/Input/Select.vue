@@ -11,6 +11,7 @@
             class="visually-hidden"
             v-bind="$attrs"
             v-model="value"
+            readonly
         >
 
         <div class="select-button" @click="toggleExpand">
